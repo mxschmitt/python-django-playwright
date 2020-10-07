@@ -6,7 +6,7 @@ class MyViewTests(StaticLiveServerTestCase):
     def setUpClass(cls):
         super().setUpClass()
         cls.playwright = sync_playwright().start()
-        cls.browser = cls.playwright.chromium.launch(headless=False)
+        cls.browser = cls.playwright.chromium.launch()
 
     @classmethod
     def tearDownClass(cls):
